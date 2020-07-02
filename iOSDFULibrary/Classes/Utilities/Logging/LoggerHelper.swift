@@ -40,37 +40,37 @@ class LoggerHelper {
     }
     
     func d(_ message: String) {
-        log(with: .debug, message: message)
+        log(with: .debug, message: "DFU, d == \(message)")
     }
     
     func v(_ message: String) {
-        log(with: .verbose, message: message)
+        log(with: .verbose, message: "DFU, v == \(message)")
     }
     
     func i(_ message: String) {
-        log(with: .info, message: message)
+        log(with: .info, message: "DFU, i == \(message)")
     }
     
     func a(_ message: String) {
-        log(with: .application, message: message)
+        log(with: .application, message: "DFU, a == \(message)")
     }
     
     func w(_ message: String) {
-        log(with: .warning, message: message)
+        log(with: .warning, message: "DFU, w == \(message)")
     }
     
     func e(_ message: String) {
-        log(with: .error, message: message)
+        log(with: .error, message: "DFU, e == \(message)")
     }
     
     func w(_ error: Error) {
         log(with: .warning, message:
-            "Error \((error as NSError).code): \(error.localizedDescription)")
+            "DFU, Error == \((error as NSError).code): \(error.localizedDescription)")
     }
     
     func e(_ error: Error) {
         log(with: .error, message:
-            "Error \((error as NSError).code): \(error.localizedDescription)")
+            "DFU, Error == \((error as NSError).code): \(error.localizedDescription)")
     }
 
     private func log(with level: LogLevel, message: String) {
