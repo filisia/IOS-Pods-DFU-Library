@@ -112,7 +112,7 @@ import CoreBluetooth
      the upload process, but also cause a buffer overflow and hang the Bluetooth adapter.
      Maximum verified values were 29 for iPhone 6 Plus or 22 for iPhone 7, both iOS 10.1.
      */
-    @objc public var packetReceiptNotificationParameter: UInt16 = 0
+    @objc public var packetReceiptNotificationParameter: UInt16 = 1
     
     /**
      Setting this property to true will prevent from jumping to the DFU Bootloader
