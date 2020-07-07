@@ -74,9 +74,12 @@ class LoggerHelper {
     }
 
     private func log(with level: LogLevel, message: String) {
+        let formatter2 = DateFormatter()
+        formatter2.timeStyle = .medium
+        let dateFormatted = formatter2.string(from: Date())
         if let logger = logger {
             queue.async {
-                logger.logWith(level, message: message)
+                logger.logWith(level, message: "\(dateFormatted) \(message)")
             }
         }
     }
